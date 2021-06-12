@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class machineTest {
@@ -31,6 +30,7 @@ public class machineTest {
         robot.keyPress(KeyEvent.VK_V);
 
         robot.delay(5000);
+
         robot.keyRelease(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_CONTROL);
 
@@ -55,5 +55,6 @@ public class machineTest {
     private static void  setClipboardData(String str){
         StringSelection ss = new StringSelection(str);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+        System.out.println("Hello");
     }
     }
